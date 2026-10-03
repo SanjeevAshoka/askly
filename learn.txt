@@ -1,0 +1,34 @@
+Embedding model setup
+brew install ollama
+ollama pull nomic-embed-text
+ollama run nomic-embed-text "hello world"
+
+# Stop the Ollama service
+ollama stop
+
+# Find the process
+ps aux | grep ollama
+ 
+# Kill it (replace PID with actual process ID)
+kill <PID>
+ 
+# Or force kill
+kill -9 <PID>
+
+
+# Check if it's running
+pgrep -f ollama
+ 
+# Or check if the port is in use
+lsof -i :11434
+
+
+When you need it again:
+ollama serve
+
+
+brew install ollama
+Ollama = The software/platform (like Docker):It's the "engine" or "platform" that can run AI models
+
+ollama pull nomic-embed-text
+nomic-embed-text: A specific AI model that specializes in converting text to embeddings
